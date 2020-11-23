@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Campaña</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Pagina del Hospital Dos de Mayo">
+	<meta name="keywords" content="software libre, open source, comunidad libre huanuco">
+	<meta name="author" content="Alberto Melgarejo">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <script src="https://parzibyte.github.io/ejemplos-javascript/convertir-tabla-a-excel/js/xlsx.full.min.js"></script>
+    <script src="https://parzibyte.github.io/ejemplos-javascript/convertir-tabla-a-excel/js/FileSaver.min.js"></script>
+    <script src="https://parzibyte.github.io/ejemplos-javascript/convertir-tabla-a-excel/js/tableexport.min.js"></script>
+<style type="text/css">
+    a:link, a:visited, a:active {
+        text-decoration:none;
+    }
+    table {
+        border-collapse: collapse;
+    }
+    table,th,td {
+        border: 1px solid black;
+    }
+    th,td {
+        padding: 5px;
+    }
+</style>
+</head>
+<body>
+	<header id="cabecera">
+	<img id="insignia1" src="img/hco.png">
+	<img id="insignia2" src="img/diresahuanuco.png"  >
+	<h1 id="tituloPrincipal">Hospital Dos de Mayo</h1>
+	<h2>Compromiso con tu Salud</h2>
+	
+	
+</header>
+
+
+<div id="agrupar">
+	<nav id="menu">
+	<ul> <!-- lista no ordenada  -->
+		<a href="index.html"><li>Inicio</li></a>
+		<a href="Nosotros.html"><li>Nosotros</li></a>
+		<a href="Campañas.html"><li>Campañas</li></a>
+		<a href="Galeria.html"><li>Galeria</li></a>
+        <a href="Contacto.html"><li>Contacto</li></a>
+        <a href="Login.html"><li>Login</li></a>
+	</ul>
+
+</nav>
+
+<section id="seccionPrincipal">
+	
+	<article>
+		
+        <h3>DIRECTORIO DEL HOSPITAL </h3>
+        <table  id="tabla" >
+            <tr>
+                <td><b>OFICINAS ADMINNISTRATIVAS</b></td><td><b>JEFES</b></td><td><b>CORREO ELECTONICO</b></td><td><b>CELULAR RPM/OTRO</b></td>
+            </tr>
+            <tr>
+                <td>DIRRECCIÓN EJECUTIVA</td><td>NILTON ACHIC ALARCON</td><td><a href="nilton_leoxv@hotmail.com">nilton_leoxv@hotmail.com</a></td><td>964328317</td>
+            </tr>
+            <tr>
+                <td>DIRRECCIÓN ADMINISTRATIVA</td><td>DIANEE SOLORZANO MACHADO</td><td><a href="jessica_dianee@hotmail.com">jessica_dianee@hotmail.com</a></td><td>935163057</td>
+            </tr>
+            <tr>
+                <td>CONTROL INSTITUCIONAL</td><td>FLORENCIO ANTONIO LOARTE ORTEGA</td><td><a href="aloarteo@hotmail.com">aloarteo@hotmail.com</a></td><td>925455672</td>
+            </tr>
+            <tr>
+                <td>OFICINA EJECUTIVA <br> DE ADMINISTRACION </td><td>CARMEN ELENA FLORES VARA</td><td><a href="cefv07@hotmail.com">cefv07@hotmail.com</a></td><td>999052524</td>
+            </tr> 
+            <tr>
+                <td>OFICINA DE PERSONAL</td><td>JUAN CARLOS FLORES VALVERDE</td><td><a href="juancaflores_25@hotmail.com">juancaflores_25@hotmail.com</a></td><td>928388237</td>
+            </tr>
+            <tr>
+                <td>OFICINA DE ECONOMIA</td><td>CLEVER AURELIO DOROTEO HILARIO</td><td><a href="quipi91@hotmail.com">quipi91@hotmail.com</a></td><td>927233701</td>
+            </tr>
+            <tr>
+                <td>OFICINA DE LOGISTICA</td><td>GABY ESPINOZA AGUILAR</td><td><a href="gabi_20_12_2@hotmail.com">gabi_20_12_2@hotmail.com</a></td><td>999053171</td>
+            </tr>
+            <tr>
+                <td> OFICINA DE SERVICOS <br> GENERALES  Y MANTENIMIENTO </td><td>EDWIN DIETER ROJAS ORBEZO</td><td><a href="edro0610@gmail.com">edro0610@gmail.com</a></td><td>962718423</td>
+            </tr>
+            <tr>
+                <td>OFICINA DE GESTION<br>TECNOLOGICA HOSPITALARIA </td><td>JORDI PARRAS ARGUELLO</td><td><a href="jpargu@hotmail.com">jpargu@hotmail.com</a></td><td>969456798</td>
+            </tr>
+            
+            <tr>
+                <td>OFICINA DE COMUNICACIONES</td><td>EMILIO DEL POZO BENITEZ</td><td><a href="delpozoelimio@hotmail.com">delpozoelimio@hotmail.com</a></td><td>924319756</td>
+            </tr>
+            
+            <tr>
+                <td>OFICINA DE ESTADISTICA <br> E INFORMATICA </td><td>MARINA ABASCAL PELAEZ</td><td><a href="mapelar56_78@hotmail.com">mapelar56_78@hotmail.com</a></td><td>954156628</td>
+            </tr>
+            
+            <tr>
+                <td>OFICINA DE APOYO</td><td>JORGE TORRENT URIBE</td><td><a href="uribe_4532@hotmail.com">uribe_4532@hotmail.com</a></td><td>914763548</td>
+            </tr>
+            
+            <tr>
+                <td>OFICINA  DE SEGUROS</td><td>MARIA LUISA BARROS </td><td><a href="barros_wec@hotmail.com">"barros_wec@hotmail.com</a></td><td>967517835</td>
+            </tr>
+            
+            <tr>
+                <td>OFICINA DE PLANAMIENTO <br> ESTRATEGICO </td><td>ROSARIO SOMOZA PRESA</td><td><a href="rosipre@hotmail.com">rosipre@hotmail.com</a></td><td>948552645</td>
+            </tr>
+            
+            <tr>
+                <td>OFICINA ASESORIA<br> JURIDICA</td><td>XAVIER CORNEJO SEDANO</td><td><a href="xaco_021_45@hotmail.com">xaco_021_45@hotmail.com</a></td><td>978462037</td>
+            </tr>
+            
+            <tr>
+                <td>OFICINA DE GESTION <br>DE LA CALIDAD</td><td>FELIPE CEBALLOS BAUTISTA</td><td><a href="fep79@hotmail.com">fep79@hotmail.com</a></td><td>924597831</td>
+            </tr>
+            
+            <tr>
+                <td>OFICINA DE EPIDIOMOLOGIA <br> Y SALUD AMBIENTAL</td><td>MARIA ANGELES MENACHO BARCIA</td><td><a href="mari012@hotmail.com">mari012@hotmail.com</a></td><td>978945341</td>
+            </tr>
+            
+        </table><br>
+    
+        <button id="btnExportar">Descargar Directorio</button>
+        <script>
+            const $btnExportar = document.querySelector("#btnExportar"),
+            $tabla = document.querySelector("#tabla");
+    
+        $btnExportar.addEventListener("click", function() {
+            let tableExport = new TableExport($tabla, {
+                exportButtons: false, // No queremos botones
+                filename: "DIRECTORIO INSTITUCIONAL", //Nombre del archivo de Excel
+                sheetname: "DIRECTORIO INSTITUCIONAL", //Título de la hoja
+            });
+            let datos = tableExport.getExportData();
+            let preferenciasDocumento = datos.tabla.xlsx;
+            tableExport.export2file(preferenciasDocumento.data, preferenciasDocumento.mimeType, preferenciasDocumento.filename, preferenciasDocumento.fileExtension, preferenciasDocumento.merges, preferenciasDocumento.RTL, preferenciasDocumento.sheetname);
+        });
+        </script>
+	</article>
+    
+</section>
+
+<aside id="seccionSecundaria">
+
+    <a href="http://www.diresahuanuco.gob.pe/portal/index.htm"><img src="img/diresahco5.png" width="200" height="80"></a>
+	<a href="http://portal.essalud.gob.pe/"><img src="img/esalud9.png" width="200" height="80"></a>
+	<a href="https://www.gob.pe/minsa/"><img src="img/images.png" width="200" height="80"></a>
+	<a href="https://www.gob.pe/sis"><img src="img/sis3.png" width="200" height="80"></a>
+	<a href="https://www.regionhuanuco.gob.pe/"><img src="img/gobiero.png" width="200" height="80"></a>
+
+</aside>
+
+<footer id="pie">
+	Hospital Dos de Mayo ::: Jirón Comercio N°196 - La Unión<br>
+	Derechos reservados &copy; La Unión 2020 </footer>
+
+</div>
+
+</body>
+</html>

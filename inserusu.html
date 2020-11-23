@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+	<title>Nosotros</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Pagina del Hospital Dos de Mayo">
+	<meta name="keywords" content="software libre, open source, comunidad libre huanuco">
+	<meta name="author" content="Alberto Melgarejo">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<!-- <meta http-equiv="refresh" content="3"> -->
+	<script type="text/javascript">
+		function obtenerdatos()
+		{
+            document.getElementById('table2').style.display="block";
+			var dni = document.getElementById('dniusU').value;
+			var nombre = document.getElementById('nomusu').value;
+            var apellido = document.getElementById('apellusu').value;
+			var telefono = document.getElementById('celuusu').value;
+            var nacimiento = document.getElementById('fechanac').value;
+			var sexo = document.getElementById('sexusu').value;
+            var estadocivil = document.getElementById('estadociusu').value;
+			var dirreccion = document.getElementById('direccionusu').value;
+            var correo = document.getElementById('correousu').value;
+			var sis = document.getElementById('codiSIS').value;
+            var usuario = document.getElementById('username').value;
+			var contraseña = document.getElementById('passwordusu').value;
+	
+			document.registro.dniobtenido.value = dni;
+			document.registro.nombreobtenida.value = nombre;
+            document.registro.apellidoobtenido.value = apellido;
+			document.registro.telefonoobtenida.value = telefono ;
+            document.registro.nacimientoobtenido.value = nacimiento ;
+			document.registro.sexoobtenida.value = sexo;
+            document.registro.estadocivilobtenido.value = estadocivil;
+			document.registro.dirreccionobtenida.value = dirreccion;
+            document.registro.correoobtenido.value = correo;
+			document.registro.sisobtenida.value = sis;
+            document.registro.usuarioobtenido.value = usuario;
+			document.registro.contraseñaobtenida.value = contraseña;
+	
+		}
+	</script>
+
+</head>
+
+<body>
+	<header id="cabecera">
+	<img id="insignia1" src="img/hco.png">
+	<img id="insignia2" src="img/diresahuanuco.png"  >
+	<h1 id="tituloPrincipal">Hospital Dos de Mayo</h1>
+	<h2>Compromiso con tu Salud</h2>
+</header>
+
+
+<div id="agrupar">
+
+
+
+<nav id="menu">
+	<ul> <!-- lista no ordenada  -->
+		<a href="index.html"><li>Inicio</li></a>
+		<a href="Nosotros.html"><li>Nosotros</li></a>
+		<a href="Campañas.html"><li>Campañas</li></a>
+		<a href="Galeria.html"><li>Galeria</li></a>
+		<a href="inserusu.html"><li>Nuevo Usuario</li></a>
+		<a href="crearcita.html"><li>Crear Cita</li></a>
+
+	</ul>
+
+	
+</nav>
+
+<section id="seccionPrincipal">
+
+	
+	<article>
+		<form name="registro">
+			<table border="1">
+			<tr>
+				<td>DNI:</td><td><input type="text" name="dniusU" id="dniusU" placeholder="DNI"></td>
+			</tr>
+			<tr>
+				<td>Nombre:</td><td><input type="text" name="nomusu" id="nomusu" placeholder="Nombre"></td>
+			</tr>
+			<tr>
+				<td>Apellido:</td><td><input type="text" name="apellusu" id="apellusu" placeholder="Apellido"></td>
+			</tr>
+			<tr>
+				<td>Telefono:</td><td><input type="text" name="celuusu" id="celuusu" placeholder="Telefono"></td>
+			</tr>
+			<tr>
+				<td>Fecha de nacimiento :</td><td><input type="date" name="fechanac" id="fechanac" placeholder="Fecha de Nacimiento"></td>
+			</tr>
+			<tr>
+				<td>Sexo:</td><td>
+					<input type="radio" name="sexusu" id="sexusu" value="Masculino">
+					<label>Masculino</label><br>
+		
+					<input type="radio" name="sexusu" id="sexusu" value="Fenemnino">
+					<label>Femenino</label></td>
+			</tr>
+			<tr>
+				<td>Estado Civil:</td><td>
+					<input type="radio" name="estadociusu"  id="estadociusu" value="Soltero">
+					<label>Soltero(a)</label><br>
+		
+					<input type="radio" name="estadociusu"  id="estadociusu" value="Casado">
+					<label>Casado(a)</label><br>   
+		
+					<input type="radio" name="estadociusu"  id="estadociusu" value="Viudo">
+					<label>Viudo(a)</label><br>
+		
+					<input type="radio" name="estadociusu"  id="estadociusu" value="Divorciado">
+					<label>Divorciado(a)</label></td>
+			</tr>
+			<tr>
+				<td>Direccion:</td><td><input type="text" name="direccionusu" id="direccionusu" placeholder="Direccion"></td>
+			</tr>
+	
+			<tr>
+				<td>Correo:</td><td><input type="email" name="correousu"  id="correousu" placeholder="Correo"></td>
+			</tr>
+				<script type="text/javascript">
+					function verificarsi() {
+						var Si = document.getElementById("Si");
+						var verificar = document.getElementById("verificar");
+						verificar.style.display = Si.checked ? "block" : "none";
+					}
+				</script>
+			<tr>
+				<td>¿Usted tiene SIS?</td><td><label for="Si">
+					<input type="radio" id="Si" name="rpta" onclick="verificarsi()" />
+					Si
+					</label>
+					<label for="No">
+					<input type="radio" id="No" name="rpta" onclick="verificarsi()" />
+					No<br>
+					</label>
+					<div id="verificar" style="display: none">
+					<input type="text" name="codiSIS" id="codiSIS" placeholder="Codigo SIS"><br>
+					</div></td>	
+			</tr>
+	
+			<tr>
+				<td>Usuario:</td><td><input type="text" name="username" id="username" placeholder="Usuario"></td>
+			</tr>
+			<tr>
+				<td>Contraseña:</td><td> <input type="password" name="passwordusu" id="passwordusu" placeholder="Contraseña"><br></td>
+			</tr>
+			
+			<tr>
+				<td colspan "2"><input type="button" name="btn1" value="Enviar" onclick="obtenerdatos()"></td>
+			</tr>
+	</table><br/>
+	
+			
+	<table style="display: none" id="table2">
+		<tr>
+			<td>DNI:</td><td><input type="text" name="dniobtenido" id="dniobtenido" disabled="disabled" ></td>
+		</tr>	
+		<tr>
+			<td>Nombre:</td><td><input type="text" name="nombreobtenida" id="nombreobtenida" disabled="disabled" ></td>
+		</tr>
+		<tr>
+			<td>Apellido:</td><td><input type="text" name="apellidoobtenido" id="apellidoobtenido" disabled="disabled" ></td>
+		</tr>	
+		<tr>
+			<td>Telefono:</td><td><input type="text" name="telefonoobtenida" id="telefonoobtenida" disabled="disabled"></td>
+		</tr>
+		<tr>
+			<td>Fecha de nacimiento :</td><td><input type="text" name="nacimientoobtenido" id="nacimientoobtenido" disabled="disabled"></td>
+		</tr>	
+		<tr>
+			<td>Sexo:</td><td><input type="text" name="sexoobtenida" id="sexoobtenida" disabled="disabled"></td>
+		</tr>
+		<tr>
+			<td>Estado Civil:</td><td><input type="text" name="estadocivilobtenido" id="estadocivilobtenido" disabled="disabled"></td>
+		</tr>	
+		<tr>
+			<td>Direccion:</td><td><input type="text" name="dirreccionobtenida" id="dirreccionobtenida" disabled="disabled"></td>
+		</tr>
+		<tr>
+			<td>Correo:</td><td><input type="text" name="correoobtenido" id="correoobtenido" disabled="disabled"></td>
+		</tr>	
+		<tr>
+			<td>Codigo SIS:</td><td><input type="text" name="sisobtenida" id="sisobtenida" disabled="disabled"></td>
+		</tr>
+		<tr>
+			<td>Usuario:</td><td><input type="text" name="usuarioobtenido" id="usuarioobtenido" disabled="disabled" ></td>
+		</tr>	
+		<tr>
+			<td>Contraseña:</td><td><input type="text" name="contraseñaobtenida" id="contraseñaobtenida" disabled="disabled" ></td>
+		</tr>
+	</table>
+	</form>
+		
+	</article>
+
+	
+</section>
+
+<aside id="seccionSecundaria">
+	<a href="http://www.diresahuanuco.gob.pe/portal/index.htm"><img src="img/diresahco5.png" width="200" height="80"></a>
+	<a href="http://portal.essalud.gob.pe/"><img src="img/esalud9.png" width="200" height="80"></a>
+	<a href="https://www.gob.pe/minsa/"><img src="img/images.png" width="200" height="80"></a>
+	<a href="https://www.gob.pe/sis"><img src="img/sis3.png" width="200" height="80"></a>
+	<a href="https://www.regionhuanuco.gob.pe/"><img src="img/gobiero.png" width="200" height="80"></a>
+
+</aside>
+
+<footer id="pie">
+	Hospital Dos de Mayo ::: Jirón Comercio N°196 - La Unión<br>
+	Derechos reservados &copy; La Unión 2020 </footer>
+
+</div>
+
+</body>
+</html>
+

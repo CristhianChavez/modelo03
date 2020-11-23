@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+	<title>Nosotros</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Pagina del Hospital Dos de Mayo">
+	<meta name="keywords" content="software libre, open source, comunidad libre huanuco">
+	<meta name="author" content="Alberto Melgarejo">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<!-- <meta http-equiv="refresh" content="3"> -->
+	<script type="text/javascript">
+		function obtenerdatos()
+		{
+            document.getElementById('table').style.display="block";
+			var fecha = document.getElementById('fechacita').value;
+			var hora = document.getElementById('horacita').value;
+            var descripcion = document.getElementById('descripcion').value;
+			var especialidad = document.getElementById('primary').value;
+            var doctor = document.getElementById('secondary').value;
+	
+			document.registro.fechaobtenido.value = fecha;
+			document.registro.horaobtenida.value = hora;
+            document.registro.descripcionobtenido.value = descripcion;
+			document.registro.especialidadobtenida.value = especialidad ;
+            document.registro.doctorobtenido.value = doctor ;
+			
+		}
+    </script>
+    
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+var options = {
+    'Medico General' : ['Juan Carlos Pimentel Abad','Sheyla Dueñas Aristisabal','Guillermo Casapia Valdivia','Antonio Loayza Conterno'],
+    "Medico Urologo" : ['Ana Maria Diaz Salinas','Mercedes Calle Betancourt','Yuliana Espinoza Arana','Roberto Gamarra Astete'],
+    "Medico Gastroenterologo" : ['Miriam Garcia Peralta','Juan Enrique Gonzales del Valle ','Elsa Patricia Gonzales Medina','Rosario Arias Hernandez','Isela Flor Baylon Rojas'],
+    "Medico Cirujano" : ['Marcos Huarcaya Quispe','Sandra Monica Maldonado Tinco','Santiago Mamani Uchasara','Olga Ore Reyes','Oscar Enrique Medina Zuta','Luis Armando Huapaya Raygada'],
+    "Medico Cardiologo" : ['Pedro Guillermo Landa Ginocchio','Jorge Augusto Carrión Neira','Nelson Boza Solis'],
+    "Medico Ginecolo" : ['Gloria Gamio Lozano','Walter David Huaytan Sauñe','Orfelina Llenpen Nuñez'],
+    "Medico Dermatologo" : ['Esther Aurora Fernandez Matta','Martin Martinez Marquez','Rosa Maria Romero Sanchez'],
+    "Medico Neurologo" : ['Juan Elvis Riquelme Miranda','Hector Lujan Venegas','Violeta Marilu Salinas Puccio'],
+    "Medico Pediatra" : ['Enrique Pinedo Nuñez','Josué Victor Orrillo Ortiz','Carlos Melgarejo Vibes'],
+    "Medico Traumatologo" : ['Teresa Rios Lima','Ruth Noricila Vega Carreazo','Alejandro Vera Silva']
+}
+        $(function(){
+        var fillSecondary = function(){
+            var selected = $('#primary').val();
+            $('#secondary').empty();
+            options[selected].forEach(function(element,index){
+                $('#secondary').append('<option value="'+element+'">'+element+'</option>');
+            });
+        }
+        $('#primary').change(fillSecondary);
+        fillSecondary();
+        });
+
+</script>
+
+</head>
+
+<body>
+	<header id="cabecera">
+	<img id="insignia1" src="img/hco.png">
+	<img id="insignia2" src="img/diresahuanuco.png"  >
+	<h1 id="tituloPrincipal">Hospital Dos de Mayo</h1>
+	<h2>Compromiso con tu Salud</h2>
+</header>
+
+
+<div id="agrupar">
+
+
+
+<nav id="menu">
+	<ul> <!-- lista no ordenada  -->
+		<a href="index.html"><li>Inicio</li></a>
+		<a href="Nosotros.html"><li>Nosotros</li></a>
+		<a href="Campañas.html"><li>Campañas</li></a>
+		<a href="Galeria.html"><li>Galeria</li></a>
+        <a href="Contacto.html"><li>Contacto</li></a>
+        <a href="inserusu.html"><li>Nuevo Usuario</li></a>
+		<a href="crearcita.html"><li>Crear Cita</li></a>
+	</ul>
+
+	
+</nav>
+
+<section id="seccionPrincipal">
+
+	
+	<article>
+        <form name="registro">
+            <table border="1">
+            <tr>
+                <td>Fecha Cita:</td><td><input type="date" name="fechacita" id="fechacita" placeholder="Fecha de Cita"><br></td>
+            </tr>
+            <tr>
+                <td>Hora de Cita :</td><td> <input type="time" name="horacita" id="horacita" placeholder="Hora de Cita"></td>
+            </tr>
+            <tr>
+                <td>Descripcion:</td><td><input type="text" name="descripcion" id="descripcion" placeholder="Descripcion"><br></td>
+            </tr>
+            <tr>
+                <td>Seleccionar Especialidad:</td><td>
+                    <div>
+                        <select id="primary" >
+                           <option value="Medico General">Medico General</option>
+                           <option value="Medico Urologo">Medico Urologo</option>
+                           <option value="Medico Gastroenterologo">Medico Gastroenterologo</option>
+                           <option value="Medico Cirujano">Medico Cirujano</option>
+                           <option value="Medico Cardiologo">Medico Cardiologo</option>
+                           <option value="Medico Ginecolo">Medico Ginecolo</option>
+                           <option value="Medico Dermatologo">Medico Dermatologo</option>
+                           <option value="Medico Neurologo">Medico Neurologo</option>
+                           <option value="Medico Pediatra">Medico Pediatra</option>
+                           <option value="Medico Traumatologo">Medico Traumatologo</option>
+                        </select>
+                        </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Seleccionar Doctor :</td><td>  
+                    <div>
+                        <select id="secondary"></select>
+                    </div>
+                </td>
+            </tr>
+            
+            
+            <tr>
+                <td colspan "2"><input type="button" name="btn1" value="Enviar" onclick="obtenerdatos()"></td>
+            </tr>
+    </table><br/>
+    
+            
+    <table style="display: none" id="table">
+        <tr>
+            <td>Fecha Cita:</td><td><input type="text" name="fechaobtenido" id="fechaobtenido" disabled="disabled"></td>
+        </tr>	
+        <tr>
+            <td>Hora de Cita:</td><td><input type="text" name="horaobtenida" id="horaobtenida" disabled="disabled" ></td>
+        </tr>
+        <tr>
+            <td>Descripcion:</td><td><input type="text" name="descripcionobtenido" id="descripcionobtenido" disabled="disabled" ></td>
+        </tr>	
+        <tr>
+            <td>Seleccionar Especialidad:</td><td><input type="text" name="especialidadobtenida" id="especialidadobtenida" disabled="disabled" ></td>
+        </tr>
+        <tr>
+            <td>Seleccionar Doctor :</td><td><input type="text" name="doctorobtenido" id="doctorobtenido" disabled="disabled" ></td>
+        </tr>	
+    </table>
+    </form>
+		
+	</article>
+
+	
+</section>
+
+<aside id="seccionSecundaria">
+	<a href="http://www.diresahuanuco.gob.pe/portal/index.htm"><img src="img/diresahco5.png" width="200" height="80"></a>
+	<a href="http://portal.essalud.gob.pe/"><img src="img/esalud9.png" width="200" height="80"></a>
+	<a href="https://www.gob.pe/minsa/"><img src="img/images.png" width="200" height="80"></a>
+	<a href="https://www.gob.pe/sis"><img src="img/sis3.png" width="200" height="80"></a>
+	<a href="https://www.regionhuanuco.gob.pe/"><img src="img/gobiero.png" width="200" height="80"></a>
+
+</aside>
+
+<footer id="pie">
+	Hospital Dos de Mayo ::: Jirón Comercio N°196 - La Unión<br>
+	Derechos reservados &copy; La Unión 2020 </footer>
+
+</div>
+
+</body>
+</html>
